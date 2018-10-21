@@ -1,0 +1,20 @@
+﻿@model IEnumerable<AcceptanceCommission.Models.Student>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Имя студента</h3>
+    <table>
+        <tr class="header"><td><p>Имя студента</p></td>
+            <td><p>Имя</p></td>
+            <td></td>
+        </tr>
+        @foreach (AcceptanceCommission.Models.Student b in Model)
+            {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p><a href="/Home/Buy/@b.Id">Зачислить</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
